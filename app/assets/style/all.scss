@@ -6,4 +6,7 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
 
+@import './helpers/mixin';
 @import './layout/index.scss';
+
+@import './layout/layout';
