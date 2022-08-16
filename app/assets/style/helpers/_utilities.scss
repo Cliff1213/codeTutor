@@ -1,0 +1,35 @@
+// text/icon linear gradient
+.text-linear {
+  background: $linear;
+  -webkit-background: $linear;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+// background linear gradient
+.background-linear-104 {
+  background: $linear-104;
+  -webkit-background: $linear-104;
+  color: $white;
+}
+
+// font sizes setting
+@each $name, $pixel in $grid-breakpoints {
+  @if ($pixel >= 576px) {
+    @media ( min-width: $pixel) {
+      @each $num, $value in $font-sizes {
+        .fs-#{$name}-#{ $num } {
+          font-size: $value !important;
+        }
+      }
+    }
+  }
+};
+
+// others
+.-ms-2 {
+  margin-left: -8px;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

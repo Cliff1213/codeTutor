@@ -7,6 +7,9 @@
 
 
 @import './helpers/mixin';
-@import './layout/index.scss';
+@import './helpers/utilities';
 
 @import './layout/layout';
+
+@import './pages/index';
+

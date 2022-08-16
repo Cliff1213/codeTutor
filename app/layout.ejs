@@ -12,27 +12,42 @@
   </head>
 
   <body>
-    <!-- header -->
-    <nav class="bg-gray-dark py-6">
-      <div class="container d-flex justify-content-between align-items-center">
-        <h1 class="layout-logo mb-0">Coding Home</h1>
-        <ul class="list-unstyled d-flex align-items-center mb-0 fs-7">
-          <li><a href="#" class="text-decoration-none text-white">首頁</a></li>
-          <li><a href="#" class="text-decoration-none text-white">課程介紹</a></li>
-          <li>
-            <a href="#" class="text-decoration-none text-white d-flex align-items-center">
-              <span class="material-symbols-outlined me-1">account_circle</span>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-6 position-relative">
+      <div class="container">
+        <h1 class="layout-logo mb-0"><a href="./index.html" class="layout-logo">Coding Home</a></h1>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+
+
+          <span class="material-symbols-outlined fs-6 me-1 d-none d-lg-block">account_circle</span>
+
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end text-center" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link text-white fs-6 py-1" aria-current="page" href="#">首頁</a>
+            <a class="nav-link text-white fs-6 py-1 ms-lg-10" href="#">課程介紹</a>
+            <a class="nav-link text-white fs-6 py-1 ms-lg-10 d-flex align-items-center justify-content-center" href="#">
+              <span class="material-symbols-outlined fs-5 me-1 d-none d-lg-block" style="font-variation-settings:
+              'FILL' 1;">account_circle</span>
               登入
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
-    </header>
+      
+      <div class="border-bottom border-2 border-success position-absolute w-50 start-0 bottom-0"></div>
+      <div class="border-bottom border-2 border-cyan position-absolute w-50 end-0 bottom-0"></div>
+    </nav>
 
     <%- contents %>
 
-    <footer class="footer">
-      
+    <footer class="footer bg-primary">
+      <div class="container-fluid py-4 py-lg-6">
+        <p class="text-gray fs-9 text-center mb-0">Coding Home © 2022 All Rights Reserved</p>
+      </div>
     </footer>
 
     <script src="./assets/js/vendors.js"></script>

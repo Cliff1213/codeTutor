@@ -1,7 +1,15 @@
-.layout-logo {
-  width: 174px;
-  height: 42px;
-  background: url('../images/logo.svg') no-repeat center;
-  background-size: contain;
-  @include textHide;
+h1.layout-logo {
+  line-height: 0;
+  a {
+    width: 24px;
+    height: 24px;
+    background: url('../images/logo2.svg') no-repeat center;
+    background-size: contain;
+    @include textHide;
+    @media (min-width: 768px) {
+      width: 174px;
+      height: 42px;
+      background: url('../images/logo.svg') no-repeat center;
+    }
+  }
 }
