@@ -8,12 +8,14 @@
     <title><%- title %></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-6 position-relative">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-6 fixed-top">
       <div class="container">
         <h1 class="layout-logo mb-0"><a href="./index.html" class="layout-logo">Coding Home</a></h1>
 
@@ -26,15 +28,20 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-end text-center" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link text-white fs-6 py-1" aria-current="page" href="#">首頁</a>
-            <a class="nav-link text-white fs-6 py-1 ms-lg-10" href="#">課程介紹</a>
-            <a class="nav-link text-white fs-6 py-1 ms-lg-10 d-flex align-items-center justify-content-center" href="#">
-              <span class="material-symbols-outlined fs-5 me-1 d-none d-lg-block" style="font-variation-settings:
-              'FILL' 1;">account_circle</span>
-              登入
-            </a>
-          </div>
+
+          <ul class="navbar-nav">
+            <li>
+              <a class="nav-link text-white fs-6 py-3 py-lg-1" aria-current="page" href="#">首頁</a>
+            </li>
+            <li>
+              <a class="nav-link text-white fs-6 py-3 py-lg-1 ms-lg-10" href="#">課程介紹</a>
+            </li>
+            <li>
+              <a class="nav-link text-white fs-6 py-3 py-lg-1 ms-lg-10 d-flex align-items-center justify-content-center" href="#">
+              <span class="material-symbols-outlined fs-5 me-1" style="font-variation-settings:'FILL' 1;">account_circle</span>登入
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       
@@ -44,6 +51,10 @@
 
     <%- contents %>
 
+    <!-- scroll top -->
+    <a href="#" class="scrolltop material-symbols-outlined position-fixed fs-1 text-white opacity-25 transition-3" style="bottom:20px; right:20px;">rocket</a>
+
+    <!-- footer -->
     <footer class="footer bg-primary">
       <div class="container-fluid py-4 py-lg-6">
         <p class="text-gray fs-9 text-center mb-0">Coding Home © 2022 All Rights Reserved</p>
@@ -51,6 +62,9 @@
     </footer>
 
     <script src="./assets/js/vendors.js"></script>
+    <!-- <script src="../node_modules/swiper/swiper-bundle.js"></script>
+    <script src="./assets/js/swiper.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/all.js"></script>
   </body>
 

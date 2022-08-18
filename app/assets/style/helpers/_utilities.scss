@@ -10,12 +10,11 @@
 .background-linear-104 {
   background: $linear-104;
   -webkit-background: $linear-104;
-  color: $white;
 }
 
 // font sizes setting
 @each $name, $pixel in $grid-breakpoints {
-  @if ($pixel >= 576px) {
+  @if ($pixel >= map-get($map: $grid-breakpoints, $key: sm)) {
     @media ( min-width: $pixel) {
       @each $num, $value in $font-sizes {
         .fs-#{$name}-#{ $num } {
@@ -26,10 +25,44 @@
   }
 };
 
+// transition
+$transition: (
+  1: .1s,
+  2: .2s,
+  3: .3s,
+  4: .4s,
+  5: .5s
+);
+@each $num, $time in $transition {
+  .transition-#{ $num } {
+    transition: $time;
+  }
+}
+
 // others
+.object-fix-cover {
+  object-fit: cover;
+}
 .-ms-2 {
   margin-left: -8px;
 }
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
+.w-content {
+  width: max-content;
+}
+
+// scrollbar style
+.scrollbar-light::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background: $primary;
+  &-track {
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    margin: 0 8px;
+  }
+  &-thumb {
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    background: rgba($light, 0.3);
+  }
 }

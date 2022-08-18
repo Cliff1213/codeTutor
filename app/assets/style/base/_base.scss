@@ -1,0 +1,14 @@
+* {
+  text-decoration: none !important;
+}
+body {
+  padding-top: 72px;
+  @media (min-width: 768px) {
+    padding-top: 90px;
+  }
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+

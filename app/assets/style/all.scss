@@ -5,6 +5,7 @@
 @import "./helpers/variables";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
+@import './base/base';
 
 @import './helpers/mixin';
 @import './helpers/utilities';
@@ -13,3 +14,6 @@
 
 @import './pages/index';
 
+
+@import '../../../node_modules/swiper/swiper.scss';
+@import './vender/swiper';
