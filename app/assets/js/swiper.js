@@ -1,4 +1,4 @@
-// programming language swiper settings
+// language
 var swiper = new Swiper(".language-swiper", {
   loop: true,
   autoplay: {
@@ -10,19 +10,9 @@ var swiper = new Swiper(".language-swiper", {
   spaceBetween: 16,
 });
 
-// comments swiper settings
-// var swiper = new Swiper(".comments-swiper", {
-//   cssMode: true,
-//   // effect: 'fade',
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable:true,
-//   },
-//   mousewheel: true,
-//   keyboard: true,
-// });
-
+// comments
 var swiper = new Swiper('.comments-swiper', {
+  loop: true,
   slidesPerView: 1,
   slidesPerColumn: 1,
   effect: 'fade',
@@ -36,20 +26,3 @@ var swiper = new Swiper('.comments-swiper', {
     prevEl: ".swiper-button-prev",
   },
 });
-
-// var swiper = new Swiper(".mySwiper", {
-//   effect: "coverflow",
-//   grabCursor: true,
-//   centeredSlides: true,
-//   slidesPerView: "auto",
-//   coverflowEffect: {
-//     rotate: 50,
-//     stretch: 0,
-//     depth: 100,
-//     modifier: 1,
-//     slideShadows: true,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-// });

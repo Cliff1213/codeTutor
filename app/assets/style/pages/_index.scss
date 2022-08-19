@@ -21,9 +21,32 @@
   .title-decoration {
     width: 50px;
   }
+  &-item {
+    @include lg {
+      color: $gray !important;
+      background: none !important;
+      outline: 1px solid $primary;
+    }
+    &:hover {
+      @include lg {
+        color: $white !important;
+        background: $dark !important;
+        outline: 1px solid $success;
+        transition: .3s;
+      }
+      .intro-icon {
+        @include lg {
+          color: transparent !important;
+        }
+      }
+    }
+  }
   &-icon {
     font-variation-settings: 'FILL' 1;
     font-size: 50px;
+    @include lg {
+      color: $gray !important;
+    }
   }
 }
 
@@ -42,6 +65,9 @@
   .title-decoration {
     width: 50px;
   }
+  .swiper-slide {
+    width: max-content !important;
+  }
 }
 
 // Courses
@@ -52,6 +78,16 @@
   &-img {
     width: 100px;
     height: 100px;
+  }
+  .card:hover {
+    @include lg {
+      outline: 1px solid $success;
+      transition: .3s;
+    }
+  }
+  &-btn:hover {
+    transform: scale(110%);
+    transition: .3s;
   }
 }
 
@@ -86,7 +122,7 @@
         transition: .3s;
       }
     }
-    &:hover .material-symbols-outlined { // 原來還可以這樣寫
+    &:hover .material-symbols-outlined {
       @include md {
         color: $success !important;
         transition: .3s;
@@ -126,6 +162,9 @@
         opacity: .5;
       }
     }
+    &-img {
+      object-fit: cover;
+    }
   }
   &-icon {
     font-variation-settings:'FILL' 1;
@@ -143,36 +182,36 @@
     display: none;
     width: 32px;
     height: 32px;
-    @include md {
+    @include lg {
       display: block;
     }
   }
   &:hover {
     .card-corner {
-      @include md {
+      @include lg {
         opacity: 1 !important;
       }
     }
     .corner-top-left {
-      @include md {
+      @include lg {
         transform: translate(0) !important;
         transition: .3s;
       }
     }
     .corner-top-right {
-      @include md {
+      @include lg {
         transform: translate(-100%) !important;
         transition: .3s .3s;
       }
     }
     .corner-bottom-left {
-      @include md {
+      @include lg {
         transform: translate(50%, -100%) !important;
         transition: .3s .6s
       }
     }
     .corner-bottom-right {
-      @include md {
+      @include lg {
         transform: translate(-100%, -100%) !important;
         transition: .3s .9s;
       }
@@ -180,7 +219,7 @@
   }
 }
 
-// comments
+// Comments
 .comments {
   background: url('../images/bg_share.jpg') no-repeat center;
   background-size: cover;
@@ -265,9 +304,11 @@
     &-button-next, &-button-prev {
       width: 24px;
       height: 24px;
+      user-select: none;
+      -webkit-user-select: none;
       &:hover {
         @include md {
-          transform: scale(120%);
+          transform: scale(150%);
           transition: .3s;
         }
       }
