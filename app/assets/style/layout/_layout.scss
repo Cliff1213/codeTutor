@@ -1,7 +1,35 @@
-.layout-logo {
-  width: 174px;
-  height: 42px;
-  background: url('../images/logo.svg') no-repeat center;
-  background-size: contain;
-  @include textHide;
+// Logo
+h1.layout-logo {
+  line-height: 0;
+  a {
+    width: 24px;
+    height: 24px;
+    background: url('../images/logo2.svg') no-repeat center;
+    background-size: contain;
+    @include textHide;
+    @media (min-width: 768px) {
+      width: 174px;
+      height: 42px;
+      background: url('../images/logo.svg') no-repeat center;
+    }
+  }
+}
+
+// Navbar
+.nav {
+  &-icon {
+    padding-top: 2px;
+  }
+}
+
+// Scroll-top Icon
+.scrollTop {
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  &:hover {
+    opacity: .5 !important;
+    transition: .3s;
+    transform: scale(120%);
+  }
 }

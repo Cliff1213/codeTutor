@@ -1,0 +1,371 @@
+// Banner
+.banner {
+  height: 336px;
+  background: url('../images/bg_home_mobile.jpg') no-repeat center;
+  background-size: cover;
+  @include md {
+    height: 680px;
+  }
+  @include lg {
+    height: calc(100vh - 90px);
+    background: url('../images/bg_home.jpg') no-repeat center;
+    background-size: cover;
+  }
+  .text-corner {
+    width: 10px;
+    height: 10px;
+  }
+}
+// Intro
+.intro {
+  .title-decoration {
+    width: 50px;
+  }
+  &-item {
+    @include lg {
+      color: $gray !important;
+      background: none !important;
+      outline: 1px solid $primary;
+    }
+    &:hover {
+      @include lg {
+        color: $white !important;
+        background: $dark !important;
+        outline: 1px solid $success;
+        transition: .3s;
+      }
+      .intro-icon {
+        @include lg {
+          color: transparent !important;
+        }
+      }
+    }
+  }
+  &-icon {
+    font-variation-settings: 'FILL' 1;
+    font-size: 50px;
+    @include lg {
+      color: $gray !important;
+    }
+  }
+}
+
+// Process
+.process {
+  .title-decoration {
+    width: 50px;
+  }
+  &-number {
+    margin-left: -8px;
+  }
+}
+
+// Language
+.language {
+  .title-decoration {
+    width: 50px;
+  }
+  .swiper-slide {
+    width: max-content !important;
+  }
+}
+
+// Courses
+.courses {
+  .title-decoration {
+    width: 50px;
+  }
+  &-img {
+    width: 100px;
+    height: 100px;
+  }
+  .card:hover {
+    @include lg {
+      outline: 1px solid $success;
+      transition: .3s;
+    }
+  }
+  &-btn:hover {
+    @include lg {
+      transform: scale(110%);
+      transition: .3s;
+    }
+  }
+}
+
+// Service
+.service {
+  .card {
+    height: 263px;
+    @include sm {
+      height: 380px !important;
+    }
+    @include lg {
+      height: 615px !important;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: $dark-black;
+      opacity: .9;
+      transition: .3s;
+    }
+    &:hover::before {
+      @include md {
+        opacity: .12;
+        transition: .3s;
+      }
+    }
+    .material-symbols-outlined {
+      @include md {
+        color: $gray !important;
+        transition: .3s;
+      }
+    }
+    &:hover .material-symbols-outlined {
+      @include md {
+        color: $success !important;
+        transition: .3s;
+      }
+    }
+    &-line {
+      width: 50px;
+      transition: .3s;
+    }
+    &:hover .card-line {
+      @include md {
+        width: 70px !important;
+        border-color: $success !important;
+        transition: .3s;
+      }
+    }
+    &-text {
+      @include md {
+        transition: .3s;
+      }
+    }
+    &:hover .card-text {
+      @include md {
+        opacity: 1 !important;
+        transition: .3s;
+      }
+    }
+    &-line {
+      width: 50px;
+      @include md {
+        border-color: $white !important;
+      }
+    }
+    &-text {
+      opacity: .8;
+      @include md {
+        opacity: .5;
+      }
+    }
+    &-img {
+      object-fit: cover;
+    }
+  }
+  &-icon {
+    font-variation-settings:'FILL' 1;
+  }
+}
+
+// Article
+.article {
+  .title-decoration {
+    width: 50px;
+  }
+}
+.article .card {
+  &-corner {
+    display: none;
+    width: 32px;
+    height: 32px;
+    @include lg {
+      display: block;
+    }
+  }
+  &:hover {
+    .card-corner {
+      @include lg {
+        opacity: 1 !important;
+      }
+    }
+    .corner-top-left {
+      @include lg {
+        transform: translate(0) !important;
+        transition: .3s;
+      }
+    }
+    .corner-top-right {
+      @include lg {
+        transform: translate(-100%) !important;
+        transition: .3s .3s;
+      }
+    }
+    .corner-bottom-left {
+      @include lg {
+        transform: translate(50%, -100%) !important;
+        transition: .3s .6s
+      }
+    }
+    .corner-bottom-right {
+      @include lg {
+        transform: translate(-100%, -100%) !important;
+        transition: .3s .9s;
+      }
+    }
+  }
+}
+
+// Comments
+.comments {
+  background: url('../images/bg_share.jpg') no-repeat center;
+  background-size: cover;
+  .title-decoration {
+    width: 50px;
+  }
+  .swiper {
+    @include md {
+      max-width: 925px;
+    }
+    @include md {
+      padding-bottom: 0 !important;
+    }
+    &-slide {
+      @include md {
+        height: 430px !important;
+      }
+    }
+    &-img {
+      padding: 0 0 8px 8px;
+      @include md {
+        max-width: 525px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &::before {
+        content: "";
+        width: calc(100% - 8px);
+        height: calc(100% - 8px);
+        z-index: -1;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border: 1px solid $gray;
+        border-radius: 24px;
+      }
+    }
+    &-card {
+      @include md {
+        max-width: 416px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+      img {
+        width: 80px;
+        height: 80px;
+        transform: translateY(-72%);
+      }
+    }
+    &-btns {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      @include md {
+        width: 280px;
+        left: 0;
+        transform: none;
+      }
+      @include lg {
+        width: 525px;
+      }
+    }
+    &-pagination {
+      margin: 0 16px;
+      @include md {
+        width: 30% !important;
+      }
+    }
+    &-pagination-bullet {
+      background: $success;
+      opacity: 1;
+      transition: .3s;
+      &-active {
+        width: 16px;
+        border-radius: 16px;
+        transition: .3s;
+      }
+    }
+    &-button-next, &-button-prev {
+      width: 24px;
+      height: 24px;
+      user-select: none;
+      -webkit-user-select: none;
+      &:hover {
+        @include md {
+          transform: scale(150%);
+          transition: .3s;
+        }
+      }
+    }
+    &-button-next:after, &-button-prev:after {
+      content: "";
+    }
+  }
+}
+
+// Reserve
+.reserve {
+  &-icon {
+    font-variation-settings:'FILL' 1;
+    font-size: 100px;
+  }
+  .card {
+    max-width: 966px;
+  }
+}
+
+// Modal login
+.modal-login {
+  .modal-dialog {
+    @include md {
+      max-width: 636px;
+    }
+  }
+  .modal-body {
+    @include md {
+      padding-left: 150px !important;
+      padding-right: 150px !important;
+    }
+  }
+  .modal-line {
+    width: 25%;
+  }
+  .btn-close {
+    width: 14px;
+    height: 14px;
+    padding: 5px !important;
+  }
+  .form {
+    &-label {
+      margin-bottom: 6px;
+    }
+  }
+  .modal-social {
+    img {
+      width: 24px;
+      height: 24px;
+      @include md {
+        position: absolute;
+        left: 32px;
+      }
+    }
+  }
+}
