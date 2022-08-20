@@ -86,8 +86,10 @@
     }
   }
   &-btn:hover {
-    transform: scale(110%);
-    transition: .3s;
+    @include lg {
+      transform: scale(110%);
+      transition: .3s;
+    }
   }
 }
 
@@ -327,5 +329,43 @@
   }
   .card {
     max-width: 966px;
+  }
+}
+
+// Modal login
+.modal-login {
+  .modal-dialog {
+    @include md {
+      max-width: 636px;
+    }
+  }
+  .modal-body {
+    @include md {
+      padding-left: 150px !important;
+      padding-right: 150px !important;
+    }
+  }
+  .modal-line {
+    width: 25%;
+  }
+  .btn-close {
+    width: 14px;
+    height: 14px;
+    padding: 5px !important;
+  }
+  .form {
+    &-label {
+      margin-bottom: 6px;
+    }
+  }
+  .modal-social {
+    img {
+      width: 24px;
+      height: 24px;
+      @include md {
+        position: absolute;
+        left: 32px;
+      }
+    }
   }
 }

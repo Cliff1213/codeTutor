@@ -3,26 +3,25 @@
 
 // material icon
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 // bootstrap
-@import './helpers/functions';
-@import "./helpers/variables";
-@import './helpers/bootstrap';
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "./helpers/variables"; // bootstrap & custom
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// swiper
+@import './vender/swiper-bundle-min';
 
 // bases
 @import './base/base';
 
 // helpers
 @import './helpers/mixin';
-@import './helpers/utilities';
+@import './helpers/utilities'; // bootstrap & custom
 
 // layout
 @import './layout/layout';
 
 // pages
 @import './pages/index';
-
-// venders
-@import './vender/swiper-vars';
-@import './vender/swiper';
-@import './vender/swiper-bundle-min';
