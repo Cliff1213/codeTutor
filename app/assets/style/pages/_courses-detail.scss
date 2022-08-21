@@ -1,0 +1,31 @@
+// detail
+.detail {
+  .card-img {
+    width: 100px;
+    height: 100px;
+  }
+  .card-icon {
+    font-variation-settings:'FILL' 1;
+  }
+  .list-corner {
+    width: 10px;
+    height: 10px;
+  }
+  &-course ul li {
+    list-style-type: square;
+    &::marker {
+      font-size: 5px;
+      color: $success;
+    }
+  }
+  .education {
+    white-space: nowrap;
+  }
+}
+
+// related
+.related {
+  .title-decoration {
+    width: 50px;
+  }
+}
