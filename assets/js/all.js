@@ -1,4 +1,19 @@
 "use strict";
+
+var scrollTop = document.querySelector('.scrollTop');
+var domBanner = document.querySelector('.banner');
+scrollTop.addEventListener('click', function (e) {
+  if (e.target.classList.contains('active')) {
+    e.target.classList.add('text-gradient-y');
+  }
+});
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 120) {
+    scrollTop.classList.add('active');
+  } else {
+    scrollTop.classList.remove('active');
+  }
+});
 "use strict";
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }

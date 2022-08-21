@@ -17168,20 +17168,19 @@ ul {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#09ACF5), to(#62DB54));
   background-image: -o-linear-gradient(top, #09ACF5, #62DB54);
   background-image: linear-gradient(180deg, #09ACF5, #62DB54);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
+  -webkit-background-clip: text !important;
+          background-clip: text !important;
+  color: transparent !important;
 }
 
 ::-webkit-scrollbar {
   width: 5px;
-  height: 8px;
+  height: 4px;
   background: #2D2D2D;
 }
 
 ::-webkit-scrollbar-track {
   border-radius: 100px;
-  margin: 0 8px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -17217,19 +17216,27 @@ h1.layout-logo a, .layout-logo.h1 a {
 }
 
 .scrollTop {
-  bottom: 20px;
-  right: 20px;
+  bottom: 16px;
+  right: 16px;
+  -webkit-transform: translateY(80px);
+      -ms-transform: translateY(80px);
+          transform: translateY(80px);
   z-index: 10;
 }
 
-.scrollTop:hover {
-  opacity: .5 !important;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-  -webkit-transform: scale(120%);
-      -ms-transform: scale(120%);
-          transform: scale(120%);
+@media (min-width: 992px) {
+  .scrollTop:hover {
+    opacity: 1 !important;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+  }
+}
+
+.scrollTop.active {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .banner {
@@ -17315,17 +17322,17 @@ h1.layout-logo a, .layout-logo.h1 a {
   width: max-content !important;
 }
 
-.courses .title-decoration {
+.popular .title-decoration {
   width: 50px;
 }
 
-.courses-img {
+.popular-img {
   width: 100px;
   height: 100px;
 }
 
 @media (min-width: 992px) {
-  .courses .card:hover {
+  .popular .card:hover {
     outline: 1px solid #62DB54;
     -webkit-transition: .3s;
     -o-transition: .3s;
@@ -17334,7 +17341,7 @@ h1.layout-logo a, .layout-logo.h1 a {
 }
 
 @media (min-width: 992px) {
-  .courses-btn:hover {
+  .popular-btn:hover {
     -webkit-transform: scale(110%);
         -ms-transform: scale(110%);
             transform: scale(110%);
@@ -17717,6 +17724,50 @@ h1.layout-logo a, .layout-logo.h1 a {
   .modal-login .modal-social img {
     position: absolute;
     left: 32px;
+  }
+}
+
+@media (min-width: 992px) {
+  .courses-nav {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .courses-nav {
+    max-width: 1100px;
+  }
+}
+
+.courses-nav .btn {
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+}
+
+.courses .card-img {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+@media (min-width: 992px) {
+  .courses .card-footer {
+    margin-left: 88px;
+  }
+}
+
+.courses .card-footer .btn {
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+}
+
+@media (min-width: 992px) {
+  .courses .card-footer .btn {
+    width: 100% !important;
+    white-space: nowrap;
   }
 }
 
