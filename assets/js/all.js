@@ -13,7 +13,17 @@ window.addEventListener('scroll', function () {
   } else {
     scrollTop.classList.remove('active');
   }
-});
+}); // datepicker
+
+var el = document.querySelector('#signupDate');
+
+if (el) {
+  var datepicker = new Datepicker(el, {
+    language: "zh-TW",
+    autohide: true,
+    format: "yyyy/mm/dd"
+  });
+}
 "use strict";
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -5524,7 +5534,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 "use strict";
 
 // language
-var swiper = new Swiper(".language-swiper", {
+var languageSwiper = new Swiper(".language-swiper", {
   loop: true,
   autoplay: {
     delay: 2500,
@@ -5535,7 +5545,7 @@ var swiper = new Swiper(".language-swiper", {
   spaceBetween: 16
 }); // comments
 
-var swiper = new Swiper('.comments-swiper', {
+var commentSwiper = new Swiper('.comments-swiper', {
   loop: true,
   slidesPerView: 1,
   slidesPerColumn: 1,
