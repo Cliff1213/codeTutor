@@ -1,0 +1,21 @@
+.credit {
+  min-height: calc(100% - 148px);
+  @include md {
+    min-height: calc(100% - 146px);
+  }
+  @include lg {
+    min-height: calc(100% - 162px);
+  }
+  &-btn {
+    @include md {
+      width: max-content !important;
+    }
+  }
+  &-btn:hover {
+    @include lg {
+      @include gradient-x-reverse;
+      transform: scale(105%);
+      transition: .3s;
+    }
+  }
+}

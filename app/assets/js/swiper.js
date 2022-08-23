@@ -1,5 +1,5 @@
 // language
-var swiper = new Swiper(".language-swiper", {
+const languageSwiper = new Swiper(".language-swiper", {
   loop: true,
   autoplay: {
     delay: 2500,
@@ -11,7 +11,7 @@ var swiper = new Swiper(".language-swiper", {
 });
 
 // comments
-var swiper = new Swiper('.comments-swiper', {
+const commentSwiper = new Swiper('.comments-swiper', {
   loop: true,
   slidesPerView: 1,
   slidesPerColumn: 1,

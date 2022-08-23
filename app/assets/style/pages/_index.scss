@@ -87,6 +87,7 @@
   }
   &-btn:hover {
     @include lg {
+      @include gradient-x-reverse;
       transform: scale(110%);
       transition: .3s;
     }

@@ -1,0 +1,138 @@
+---
+title: courses
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<!-- Process -->
+<div class="process bg-black">
+  <div class="container">
+    <div class="row">
+      <div class="col-10 col-lg-8 mx-auto">
+        <div class="position-relative mx-auto" style="width: 90%;">
+
+          <div class="progress mx-auto bg-gray-light" style="height: 2px;">
+            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+          <div class="position-absolute start-0 translate-middle" style="top: 15px;">
+            <div class="process-circle bg-success rounded-pill d-flex justify-content-center align-items-center text-white mb-1 mx-auto">
+              <span class="material-symbols-outlined fs-9">done</span>
+            </div>
+            <p class="process-txt mb-0 text-success">課程報名</p>
+          </div>
+
+          <div class="position-absolute start-50 translate-middle" style="top: 15px;">
+            <div class="process-circle bg-primary border border-gray-light rounded-pill d-flex justify-content-center align-items-center text-white mb-1 mx-auto">
+              <p class="fs-9 mb-0">2</p>
+            </div>
+            <p class="process-txt mb-0 text-gray-light">信用卡付款</p>
+          </div>
+
+          <div class="position-absolute start-100 translate-middle" style="top: 15px;">
+            <div class="process-circle bg-primary border border-gray-light rounded-pill d-flex justify-content-center align-items-center text-white mb-1 mx-auto">
+              <p class="fs-9 mb-0">3</p>
+            </div>
+            <p class="process-txt mb-0 text-gray-light">付款成功</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Signup -->
+<div class="signup bg-black pb-10 py-md-12">
+  <div class="container">
+    <div class="px-lg-12">
+      <div class="d-flex flex-column align-items-center align-items-xl-end position-relative">
+        <div class="signup-card card bg-primary rounded-0 h-100 mb-11">
+          <div class="card-body text-white p-6 py-xxl-12 px-xxl-8 d-flex flex-column">
+            <div class="d-flex flex-column align-items-center">
+              <img src="./assets/images/teacher01.jpg" class="popular-img rounded-pill mb-2 border border-3 border-success" alt="img_course">
+              <p class="mb-6">Belinda</p>
+              <h4 class="card-title align-self-start fs-7 fs-md-6 fw-bold mx-auto">基礎前端 - HTML</h4>
+            </div>
+            <div>
+              <p class="card-text text-success mb-2 text-center">前端語言</p>
+              <p class="card-text">帶領無基礎、文組生、對網頁設計有興趣的人，進入網站工程領域的基礎課，將從最基礎的 HTML 語法出發。</p>
+            </div>
+          </div>
+          <div class="triangle-bottom bg-primary position-absolute top-100 start-50 translate-middle-x d-xl-none"></div>
+          <div class="triangle-right bg-primary position-absolute top-50 start-100 translate-middle-y d-none d-xl-block"></div>
+        </div>
+    
+        
+        <div class="signup-content card bg-dark-black rounded-0 border-0 h-auto">
+          <div class="card-body p-6 py-lg-12 ps-xl-0 pe-xl-8 flex-grow-0">
+            <h2 class="fs-4 fw-bold text-center text-white mb-6">課程報名</h2>
+            <p class="fs-6 fw-bold text-center text-lg-start text-white mb-4">選擇付款方式</p>
+    
+            <ul class="payment d-flex flex-wrap flex-lg-nowrap justify-content-between justify-content-lg-start mb-8">
+              <li class="mb-2 mb-lg-0 me-lg-4">
+                <a href="#" class="btn btn-outline-success py-4 px-lg-8 w-100 rounded-4">信用卡付款</a>
+              </li>
+              <li class="mb-2 mb-lg-0 me-lg-4">
+                <a href="#" class="btn btn-outline-white py-4 px-lg-8 w-100 rounded-4">超商繳款</a>
+              </li>
+              <li class="me-lg-4">
+                <a href="#" class="btn btn-outline-white py-4 px-lg-8 w-100 rounded-4">ATM轉帳</a>
+              </li>
+              <li>
+                <a href="#" class="btn btn-outline-white py-4 px-lg-8 w-100 rounded-4">12期分期付款</a>
+              </li>
+            </ul>
+    
+            <h3 class="fs-6 fw-bold text-center text-lg-start text-white mb-4">訂單資訊</h3>
+    
+            <form class="order d-flex flex-wrap justify-content-between">
+              <div class="order-name w-100 mb-4 mb-md-6">
+                <label for="signupName" class="form-label text-gray-light">姓名</label>
+                <input type="text" class="form-control py-2 px-4 bg-dark-black border-white text-white" placeholder="請輸入姓名" id="signupName" aria-describedby="emailHelp">
+              </div>
+    
+              <div class="order-phone w-100 mb-4 mb-md-6">
+                <label for="signupPhone" class="form-label text-gray-light">電話</label>
+                <input type="tel" class="form-control py-2 px-4 bg-dark-black border-white text-white" placeholder="請輸入電話號碼"  id="signupPhone">
+              </div>
+    
+              <div class="w-100 mb-4 mb-md-6 w-100">
+                <label for="signupEmail" class="form-label text-gray-light">Email</label>
+                <input type="email" class="form-control py-2 px-4 bg-dark-black border-white text-white" placeholder="請輸入 Email"  id="signupEmail">
+              </div>
+    
+              <div class="order-course w-100 mb-4 mb-md-6">
+                <label for="signupCourses" class="form-label text-gray-light">課程</label>
+                <select id="disabledSelect" class="form-select py-2 px-4 bg-dark-black border-white text-white">
+                  <option>1 堂 50 分鐘</option>
+                  <option>3 堂 50 分鐘</option>
+                  <option>10 堂 50 分鐘</option>
+                  <option>20 堂 50 分鐘</option>
+                  <option>洽談報價</option>
+                </select>
+              </div>
+    
+              <div class="order-date w-100 mb-4 mb-md-6">
+                <label for="signupDate" class="form-label text-gray-light">想預約的日期</label>
+                <input type="email" class="form-control py-2 px-4 bg-dark-black border-white text-white" placeholder="請選擇日期" name="datepicker" id="signupDate">
+              </div>
+    
+              <div class="mb-6 mb-md-6 w-100">
+                <label for="signupLocation" class="form-label text-gray-light">上課地點</label>
+                <input type="email" class="form-control py-2 px-4 bg-dark-black border-white text-white" placeholder="請輸入上課地點"  id="signupLocation">
+              </div>
+    
+              <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between w-100">
+                <p class="text-white fs-6 mb-6 mb-md-0 font-Azeret-Mono">NT$1600</p>
+                <a href="./courses-signup-step2.html" class="order-btn btn d-flex justify-content-center align-items-center gradient-x fs-6 text-white py-2 px-12 rounded-4 border-0 w-100 transition-3">前往結帳</a>
+              </div>
+            </form>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

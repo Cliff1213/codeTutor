@@ -6,8 +6,6 @@ scrollTop.addEventListener('click', (e) => {
   }
 })
 
-
-
 window.addEventListener('scroll', () => {
   if(window.scrollY > 120) {
     scrollTop.classList.add('active');
@@ -15,3 +13,13 @@ window.addEventListener('scroll', () => {
     scrollTop.classList.remove('active');
   }
 })
+
+// datepicker
+const el = document.querySelector('#signupDate');
+if(el) {
+  const datepicker = new Datepicker(el, {
+    language: "zh-TW",
+    autohide: true,
+    format: "yyyy/mm/dd",
+  }); 
+}

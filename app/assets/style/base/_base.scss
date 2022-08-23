@@ -1,6 +1,9 @@
 * {
   text-decoration: none !important;
 }
+html, body {
+  height: 100%;
+}
 body {
   padding-top: 72px;
   @media (min-width: 768px) {

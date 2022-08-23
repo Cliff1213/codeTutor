@@ -27,5 +27,9 @@
         white-space: nowrap;
       }
     }
+    .btn.gradient-x:hover {
+      @include gradient-x-reverse;
+      transition: .3s;
+    }
   }
 }

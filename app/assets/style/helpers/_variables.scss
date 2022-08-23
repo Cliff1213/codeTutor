@@ -54,10 +54,6 @@ $teal:    #20c997 !default;
 $cyan:    #09ACF5 !default;
 // scss-docs-end color-variables
 
-// linear style color
-$linear:  linear-gradient(to top, $green, $cyan) !default;
-$linear-104:  linear-gradient(-104deg, $green, $cyan) !default;
-
 // scss-docs-start colors-map
 $colors: (
   "blue":       $blue,
@@ -82,7 +78,7 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
-$dark-balck:    $dark-black !default;
+$dark-black:    $dark-black !default;
 $cyan:          $cyan !default;
 $gray:          $gray-500 !default;
 // scss-docs-end theme-color-variables
@@ -241,7 +237,7 @@ $enable-grid-classes:         true !default;
 $enable-button-pointers:      true !default;
 $enable-rfs:                  false !default;
 $enable-validation-icons:     true !default;
-$enable-negative-margins:     false !default;
+$enable-negative-margins:     true !default;
 $enable-deprecation-messages: true !default;
 $enable-important-utilities:  true !default;
 
@@ -278,6 +274,7 @@ $spacers: (
   9: $spacer * 2.25,
   10: $spacer * 2.5,
 
+  11: $spacer * 2.75,
   12: $spacer * 3,
   14: $spacer * 3.5,
   16: $spacer * 4,
@@ -849,7 +846,8 @@ $form-select-disabled-bg:           $gray-200 !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
 $form-select-bg-position:           right $form-select-padding-x center !default;
 $form-select-bg-size:               16px 12px !default; // In pixels because image dimensions
-$form-select-indicator-color:       $gray-800 !default;
+// $form-select-indicator-color:       $gray-800 !default;
+$form-select-indicator-color:       $white !default;
 $form-select-indicator:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>") !default;
 
 $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 + $form-select-indicator-padding !default;

@@ -102,6 +102,11 @@
   background-image: linear-gradient(104deg, $start-color $start-percent, $end-color $end-percent);
 }
 
+/* Horizontal gradient, from left to right */
+@mixin gradient-x-reverse($start-color: $green, $end-color: $cyan, $start-percent: null, $end-percent: null) {
+  background-image: linear-gradient(104deg, $start-color $start-percent, $end-color $end-percent);
+}
+
 /* Vertical gradient, from top to bottom */
 @mixin gradient-y($start-color: $cyan, $end-color: $green, $start-percent: null, $end-percent: null) {
   background-image: linear-gradient(180deg, $start-color $start-percent, $end-color $end-percent);

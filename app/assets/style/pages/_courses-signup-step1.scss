@@ -1,0 +1,100 @@
+// Process
+.process {
+  padding: 33px 0 63px;
+  @include md {
+    background: $dark-black !important;
+    padding: 33px 0 55px;
+  }
+  &-circle {
+    width: 20px;
+    height: 20px;
+  }
+  &-circle p {
+    margin-bottom: 2px !important;
+  }
+  &-txt {
+    white-space: nowrap;
+  }
+}
+
+// Signup
+.signup {
+  @include lg {
+    padding-bottom: 144px !important;
+  }
+  &-card {
+    max-width: 416px;
+    height: auto !important;
+    z-index: 10;
+    @include xl {
+      max-width: 330px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @include xxl {
+      max-width: 416px;
+    }
+  }
+  .triangle-bottom {
+    width: 24px;
+    height: 12px;
+    clip-path:polygon(0% 0%, 100% 0%, 50% 100%);
+    -webkit-clip-path:polygon(0% 0%, 100% 0%, 50% 100%);
+  }
+  .triangle-right {
+    width: 12px;
+    height: 24px;
+    clip-path:polygon(0% 0%, 100% 50%, 0% 100%);
+    -webkit-clip-path:polygon(0% 0%, 100% 50%, 0% 100%);
+  }
+
+  &-content {
+    @include xl {
+      max-width: 728px;
+      padding-left: 79px;
+    }
+    @include xxl {
+      max-width: 856px;
+      padding-left: 114px;
+    }
+  }
+  .payment li {
+    width: calc(50% - 4px);
+    @include lg {
+      width: max-content;
+    }
+  }
+  .order {
+    &-name, &-phone, &-course, &-date {
+      @include md {
+        width: calc(50% - 24px) !important;
+      }
+    }
+    &-btn {
+      @include md {
+        width: max-content !important;
+      }
+    }
+    &-btn:hover {
+      @include gradient-x-reverse;
+      transform: scale(105%);
+      transition: .3s;
+    }
+  }
+}
+// datepicker
+.datepicker {
+  &-picker {
+    border-radius: 8px;
+    padding: 0 4px;
+  }
+  &-cell:not(.disabled):hover {
+    background: $gray-400;
+  }
+  &-cell.selected, &-cell.selected:hover {
+    background: $success;
+    color: $white;
+  }
+}
