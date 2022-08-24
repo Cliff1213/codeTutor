@@ -10,8 +10,6 @@
 @import "./helpers/variables"; // bootstrap & custom
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
-// swiper
-@import './vender/swiper-bundle-min';
 
 // bases
 @import './base/base';
@@ -30,3 +28,6 @@
 @import './pages/courses-signup-step1';
 @import './pages/courses-signup-step2';
 @import './pages/courses-signup-step3';
+
+// swiper
+@import './vender/swiper-bundle-min';
