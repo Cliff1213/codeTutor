@@ -18823,7 +18823,7 @@ fieldset:disabled .btn {
   }
 }
 
-* {
+a {
   text-decoration: none !important;
 }
 
@@ -19688,8 +19688,15 @@ h1.layout-logo a, .layout-logo.h1 a {
   height: 10px;
 }
 
+.detail .list-item:hover {
+  color: #62DB54 !important;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
 @media (min-width: 992px) {
-  .detail .list-icon:hover {
+  .detail .list-item:hover .list-icon {
     -webkit-transform: scale(120%);
         -ms-transform: scale(120%);
             transform: scale(120%);
